@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-ago-2014, 0.11.27
+    Author     : Antonio.Fregoli
+*/
+
+#chart {
+    height: 400px; 
+}
+
+#chart text{
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+#map path{
+    fill: #EEE;
+    stroke: #FFF;
+}
+
+
