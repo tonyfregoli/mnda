@@ -8,12 +8,81 @@ and open the template in the editor.
     Author     : Antonio.Fregoli
 */
 
+#cat-control {
+    width: 100%;
+}
+
+#cat-control button{
+    font-weight: bold;
+    width: 33%;
+}
+
+::-webkit-input-placeholder {
+   font-weight: bold;
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-weight: bold;
+   color: white;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-weight: bold;
+   color: white;
+}
+
+:-ms-input-placeholder {  
+   font-weight: bold;
+   color: white;
+}
+
+#scores-form .scorebox {
+    font-weight: bold;
+    color: white;
+}
+
+#update {
+    width: 100%;
+}
+
+#keys {
+    /*height: 430px;*/
+}
+
+.features {
+    /* height: 430px; */
+    fill: #CCC;
+    stroke: #FFF;
+}
+
+.features-hl {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+    stroke-width: 2px;
+    stroke: #1E90FF;
+}
+
+.features-hl:hover {
+    stroke-opacity: 1;
+}
+
+.features-hl-chart-hover {
+    stroke-opacity: 1;
+}
+
 #chart {
-    height: 400px; 
+    /*height: 430px; */
 }
 
 #chart text{
-    font: 10px sans-serif;
+    font: 9px sans-serif;
+}
+
+#chart .label{
+    font: 11px sans-serif;
+    fill: #fff; 
+    font-weight: bold;
 }
 
 .axis path,
@@ -23,9 +92,32 @@ and open the template in the editor.
     shape-rendering: crispEdges;
 }
 
-#map path{
-    fill: #EEE;
-    stroke: #FFF;
+.c_scn_box {
+    fill-opacity: 0;
+    stroke-opacity: 0;
+    stroke: #1E90FF;
+    stroke-width: 4px;
 }
 
+.c_scn_box:hover {
+    stroke-opacity: 1;
+}
 
+.c-scn-box-map-hover {
+    stroke-opacity: 1;
+}
+#info {
+    margin-top: 20px;
+}
+
+#scn-header {
+    font-weight: bold;
+}
+.percentage {
+    width: 56px;
+    margin-left: 5px;
+}
+
+#rawdata {
+    white-space: nowrap;
+}

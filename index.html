@@ -1,39 +1,75 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>My stacked bar chart</title>
+    <title>D3 Crosstab sorting</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://d3js.org/topojson.v1.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--script src="http://d3js.org/d3.v3.min.js"></script-->
+    <script src="js/d3.min.js"></script>
+    <!--script src="http://d3js.org/topojson.v1.min.js"></script-->
+    <script src="js/topojson.v1.min.js"></script>
+    <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-->
+    <script src="js/jquery-1.11.1.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <form></form>
+      <div class="page-header">
+        <h1>D3 Crosstab sorting</h1>
+        <p>Crosstab at the bottom of the page shows figures for People with MND about the question "<i>How long was it from when you first consulted your GP until you were referred to a Neurologist?</i>". 
+          Data is broken down by NHS Strategic Clinical Network and is courtesy of charity <a href="http://www.mndassociation.org/">MNDA</a>. 
+          Our aim is to benchmark the regions. In order to do that, <b>fill in the right hand side boxes with appropriate scores for each type of performance, then click on <i>Update</i> (suggested values 10, 5, 1, -3, -6, -10, 0</b>).</p>
       </div>
       <div class="row">
-        <div class="col-md-4">
-          <div id="chart"></div>
-        </div>
-        <div class="col-md-4">
-          <div id="keys">
-            <div id="map-keys"></div>
-            <div id="chart-keys"></div>
+        <div class="col-md-2">
+          <!--h4>Input scores</h4-->
+          <div id="scores">
+            <form id="scores-form" class="form-group"></form>
           </div>
         </div>
         <div class="col-md-4">
+          <!--h4>Chart goes here</h4-->
+          <div id="chart"></div>
+        </div>
+        <div class="col-md-2">
+          <div id="keys">
+            <!-- h4>Keys go here</h4 -->
+            <h6>Map categories
+              <div class="btn-group" id="cat-control">
+                <button id="less-cat" type="button" class="btn btn-primary">-</button>
+                <button id="num-cat" type="button" class="btn btn-primary" disabled>4</button>
+                <button id="more-cat" type="button" class="btn btn-primary">+</button>
+              </div>
+            </h6>
+            <div id="info">
+              <h4 id="scn-header"></h4>
+              <h5 id="cat-data"></h5>
+              <h5 id="rank-data"></h5>
+              <div id="scn-data"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <!--h4>Map goes here</h4-->
+          <div id="cat-switch"></div>
           <div id="map"></div>
         </div>
       </div>
-      <script src="js/app.js"></script>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">How long was it from when you first consulted your GP until you were referred to a Neurologist?</h3>
+        </div>
+        <div class="table-responsive">
+          <h6>
+            <table class="table" id="rawdata">
+            </table>
+          </h6>
+        </div>
+      </div>
+      <p>Data ©2013 MND Association</p>
+    </div>
+    <script src="js/app.js"></script>
   </body>
 </html>
