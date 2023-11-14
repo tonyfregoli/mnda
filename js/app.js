@@ -71,7 +71,7 @@ d3.json("data/data.json", function(error, data) {
             .attr("name", function(d) {
                 return d.key;
             })
-            .attr("placeholder", "enter score")
+            .attr("placeholder", "enter mark here")
             .attr("class", "scorebox form-control")
             .style("background-color", function(d){
                 return c_color(d.key);
